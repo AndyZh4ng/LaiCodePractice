@@ -16,4 +16,17 @@ public class InsertInBinarySearchTree {
         }
         return newRoot;
     }
+    //recursion
+    public TreeNode insertRecursion(TreeNode root, int key){
+        if(root == null){
+            return new TreeNode(key);
+        }
+
+        if(root.value > key) {
+            root.left = insertRecursion(root.left, key);
+        } else if(root.value < key){
+            root.right = insertRecursion(root.right, key);
+        }
+        return root;
+    }
 }

@@ -10,7 +10,7 @@ public class CombinationOfCoins {
         if(target == 0) {
             return res;
         }
-        Integer[] soluPrefix = new Integer[4];
+        Integer[] soluPrefix = new Integer[coins.length];
         helper(target, coins, res, soluPrefix, 0);
         return res;
     }
